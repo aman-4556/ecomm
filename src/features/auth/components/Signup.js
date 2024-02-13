@@ -5,14 +5,17 @@ import {
   incrementAsync,
   selectCount,
 } from '../authSlice';
-import {Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-export default function Signup () {
+export default function Signup() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
- 
+
+
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+    <>
+  
+      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
@@ -20,7 +23,7 @@ export default function Signup () {
             alt="Your Company"
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Create Account
+            Create a New Account
           </h2>
         </div>
 
@@ -70,7 +73,7 @@ export default function Signup () {
                 <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
                   Confirm Password
                 </label>
-               
+              
               </div>
               <div className="mt-2">
                 <input
@@ -83,25 +86,24 @@ export default function Signup () {
               </div>
             </div>
 
-
             <div>
               <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Sign up
+                Sign Up
               </button>
             </div>
           </form>
 
           <p className="mt-10 text-center text-sm text-gray-500">
-            Already  a member?{' '}
+            Already a Member?{' '}
             <Link to="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Log in
+              Log In
             </Link>
           </p>
         </div>
       </div>
+    </>
   );
 }
-

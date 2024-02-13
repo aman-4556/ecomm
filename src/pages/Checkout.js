@@ -312,7 +312,7 @@ function Checkout() {
               </div>
             </div>
 
-
+          
           </form>
         </div>
         <div className="lg:col-span-2">
