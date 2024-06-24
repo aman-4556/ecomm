@@ -44,7 +44,6 @@ function classNames(...classes) {
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
-  const user = useSelector(selectLoggedInUser);
   const items = useSelector(selectItems);
   const product = useSelector(selectProductById);
   const dispatch = useDispatch();
@@ -58,8 +57,7 @@ export default function ProductDetail() {
       console.log({ items, product });
       const newItem = {
         product: product.id,
-        quantity: 1,
-        user: user.id,
+        quantity: 1
       };
       dispatch(addToCartAsync(newItem));
       // TODO: it will be based on server response of backend
@@ -134,7 +132,6 @@ export default function ProductDetail() {
                 alt={product.title}
                 className="h-full w-full object-cover object-center"
               />
-              {console.log(product.images[0])}
             </div>
             <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
               <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
