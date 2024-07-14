@@ -21,7 +21,7 @@ export default function Login() {
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
-            className="mx-auto h-10 w-auto"
+            className="mx-auto h-auto w-auto max-w-52"
             src="/ecommerce.png"
             alt="Your Company"
           />
@@ -53,7 +53,7 @@ export default function Login() {
                   {...register('email', {
                     required: 'email is required',
                     pattern: {
-                      value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                      value: /\b[\w-]+@[\w-]+\.\w{2,4}\b/gi,
                       message: 'email not valid',
                     },
                   })}
